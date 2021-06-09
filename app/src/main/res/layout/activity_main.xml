@@ -19,77 +19,92 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/lyt_progress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/btn_click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <com.graveno.alphalab.app.customprogress.CircularProgressBar
-            android:id="@+id/progress_left"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:cs_circle_style = "butt"
-            app:cs_progress = "30"
-            app:cs_max = "100"
-            android:visibility="visible"
-            app:cs_circle_stroke_width="20dp"
-            app:cs_circle_color="@android:color/darker_gray"
-            app:cs_circle_progress_color = "@android:color/holo_orange_dark"
-            app:cs_pointer_color = "@android:color/holo_orange_dark"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <com.graveno.alphalab.app.customprogress.CircularProgressBar
-            android:id="@+id/progress_center"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:cs_circle_style = "butt"
-            app:cs_progress = "50"
-            app:cs_max = "100"
-            android:visibility="visible"
-            app:cs_circle_stroke_width="20dp"
-            app:cs_circle_color="@android:color/darker_gray"
-            app:cs_circle_progress_color = "@android:color/holo_orange_dark"
-            app:cs_pointer_color = "@android:color/holo_orange_dark"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lyt_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-        <com.graveno.alphalab.app.customprogress.CircularProgressBar
-            android:id="@+id/progress_right"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:cs_circle_style = "butt"
-            app:cs_progress = "70"
-            app:cs_max = "100"
-            android:visibility="visible"
-            app:cs_circle_stroke_width="20dp"
-            app:cs_circle_color="@android:color/darker_gray"
-            app:cs_circle_progress_color = "@android:color/holo_orange_dark"
-            app:cs_pointer_color = "@android:color/holo_orange_dark"/>
+                <com.graveno.alphalab.app.customprogress.CircularProgressBar
+                    android:id="@+id/progress_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cs_circle_style = "butt"
+                    app:cs_progress = "30"
+                    app:cs_max = "100"
+                    android:visibility="visible"
+                    app:cs_circle_stroke_width="20dp"
+                    app:cs_circle_color="@android:color/darker_gray"
+                    app:cs_circle_progress_color = "@android:color/holo_orange_dark"
+                    app:cs_pointer_color = "@android:color/holo_orange_dark"/>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+                <com.graveno.alphalab.app.customprogress.CircularProgressBar
+                    android:id="@+id/progress_center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cs_circle_style = "butt"
+                    app:cs_progress = "50"
+                    app:cs_max = "100"
+                    android:visibility="visible"
+                    app:cs_circle_stroke_width="20dp"
+                    app:cs_circle_color="@android:color/darker_gray"
+                    app:cs_circle_progress_color = "@android:color/holo_orange_dark"
+                    app:cs_pointer_color = "@android:color/holo_orange_dark"/>
 
-    <com.graveno.alphalab.app.customprogress.CircularProgressBar
-        android:id="@+id/cir_progress"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:padding="30dp"
-        app:cs_circle_style = "butt"
-        app:cs_progress = "90"
-        app:cs_max = "100"
-        android:visibility="gone"
-        app:cs_circle_stroke_width="32dp"
-        app:cs_pointer_alpha_ontouch ="10"
-        app:cs_circle_color="@android:color/darker_gray"
-        app:cs_circle_progress_color = "@android:color/holo_orange_dark"
-        app:cs_pointer_color = "@android:color/holo_orange_dark"
-        app:layout_constraintTop_toBottomOf="@+id/btn_click"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+                <com.graveno.alphalab.app.customprogress.CircularProgressBar
+                    android:id="@+id/progress_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cs_circle_style = "butt"
+                    app:cs_progress = "70"
+                    app:cs_max = "100"
+                    android:visibility="visible"
+                    app:cs_circle_stroke_width="20dp"
+                    app:cs_circle_color="@android:color/darker_gray"
+                    app:cs_circle_progress_color = "@android:color/holo_orange_dark"
+                    app:cs_pointer_color = "@android:color/holo_orange_dark"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.graveno.alphalab.app.customprogress.CircularProgressBar
+                android:id="@+id/cir_progress"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:padding="30dp"
+                app:cs_circle_style = "butt"
+                app:cs_progress = "90"
+                app:cs_max = "100"
+                android:visibility="visible"
+                app:cs_circle_stroke_width="30dp"
+                app:cs_pointer_alpha_ontouch ="10"
+                app:cs_circle_color="@android:color/darker_gray"
+                app:cs_circle_progress_color = "@android:color/holo_orange_dark"
+                app:cs_pointer_color = "@android:color/holo_orange_dark"
+                app:layout_constraintTop_toBottomOf="@+id/lyt_progress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
